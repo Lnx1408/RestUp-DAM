@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:background="#323131"
+    tools:context=".loginActivity"
+    android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="Usuario: Gurpo9   contraseña:123456"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button_run"
+        android:gravity="center"
+        android:hint="Usuario"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button_run"
+        android:gravity="center"
+        android:hint="Password"
+        android:imeActionLabel="SIgn_in"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginTop="92dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        tools:layout_editor_absoluteX="-35dp">
+
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="136dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start"
+            android:textColor="@color/white"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="64dp"
+            android:background="#F4BE31"
+            android:text="Sign in" />
+
+        <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="114dp"
+            android:layout_height="48dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="60dp"
+            android:background="#F4BE31"
+            android:text="Salir" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
