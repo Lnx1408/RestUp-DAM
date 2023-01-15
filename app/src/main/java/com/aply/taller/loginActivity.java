@@ -31,6 +31,8 @@ public class loginActivity extends AppCompatActivity {
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        setTheme(R.style.SplashTheme);
         super.onCreate(savedInstanceState);
         iniciarSesion();
 

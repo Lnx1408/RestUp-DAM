@@ -2,4 +2,11 @@
     <string name="app_name">taller</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="SignUp">SignUp</string>
+    <string name="Login">Login</string>
+    <string name="usuario">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="credenciales">Usuario: Grupo9   contraseña:123456</string>
+    <string name="fecha">Fecha</string>
+    <string name="SolicitudCredenciales">Por favor, ingrese sus credenciales</string>
 </resources>
