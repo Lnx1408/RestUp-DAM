@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <bitmap android:src="@mipmap/img_btn_promociones_light"/>
+    </item>
+    <item>
+        <bitmap android:src="@mipmap/img_btn_promociones_dark"/>
+    </item>
+</selector>

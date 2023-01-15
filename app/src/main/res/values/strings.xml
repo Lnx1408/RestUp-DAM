@@ -9,4 +9,7 @@
     <string name="credenciales">Usuario: Grupo9   contraseña:123456</string>
     <string name="fecha">Fecha</string>
     <string name="SolicitudCredenciales">Por favor, ingrese sus credenciales</string>
+    <string name="Reserva">Reservas</string>
+    <string name="Menu">Menú</string>
+    <string name="Promociones">Promociones</string>
 </resources>
