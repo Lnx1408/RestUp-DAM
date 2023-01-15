@@ -16,4 +16,9 @@
     <style name="SplashTheme" parent="Theme.Taller.">
         <item name="android:windowBackground">@drawable/splash_app</item>
     </style>
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/Gray</item>
+    </style>
+
+
 </resources>

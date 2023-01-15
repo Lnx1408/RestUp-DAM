@@ -165,7 +165,8 @@ public class RegistroActivity extends AppCompatActivity {
         int mes = cal.get(Calendar.MONTH);
         int dia = cal.get(Calendar.DAY_OF_MONTH);
 
-        DatePickerDialog dp = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog dp = new DatePickerDialog(this, R.style.DialogTheme,
+                new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayofmonth) {
                 String fecha = dayofmonth +"/" + month +1 + "/" + year;
