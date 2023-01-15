@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="opciones">
+            <item>Convencional</item>
+            <item>Celular</item>
+        </string-array>
+</resources>

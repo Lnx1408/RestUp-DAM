@@ -114,8 +114,11 @@ public class loginActivity extends AppCompatActivity {
         salir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
-                System.exit(0);
+                Intent registro = new Intent(view.getContext(), RegistroActivity.class);
+                startActivity(registro);
+
+                /*finish();
+                System.exit(0);*/
             }
         });
     }
