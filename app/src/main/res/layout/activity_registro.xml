@@ -4,17 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistroActivity">
+    tools:context=".RegistroActivity"
+    android:background="@color/Gray">
 
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/grenn_c"
-        android:descendantFocusability="afterDescendants"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+
 
         <!--TextView
             android:id="@+id/textView"
@@ -24,159 +18,183 @@
             android:gravity="center_horizontal"
             android:text="Formulario de registro" /-->
 
-        <EditText
-            android:id="@+id/txtNombres"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/button_run"
-            android:gravity="center_horizontal|center_vertical"
-            android:hint="Ingrese sus nombres"
-            android:digits="abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
-            android:layout_marginRight="16dp"
-            android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Creación de cuenta"
+        android:textColor="#F2EAEA"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/txtNombres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNombres"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button_run"
+        android:digits="abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Ingrese sus nombres"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.129" />
+
+    <EditText
+        android:id="@+id/txtApellidos"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button_run"
+        android:digits="abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Ingrese sus apellidos"
+        android:radius="12dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtNombres"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <Spinner
+        android:id="@+id/spopciones"
+        android:layout_width="87dp"
+        android:layout_height="48dp"
+        android:background="@drawable/button_run"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtApellidos"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <EditText
+        android:id="@+id/txtPhone"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button_run"
+        android:digits="1234567890 +-()"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Ingrese un número de telefono"
+        android:inputType="phone"
+        android:maxLength="13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/spopciones"
+        app:layout_constraintTop_toBottomOf="@id/txtApellidos"
+        app:layout_constraintVertical_bias="0.08" />
 
 
-        <EditText
-            android:id="@+id/txtApellidos"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="92dp"
-            android:background="@drawable/button_run"
-            android:gravity="center_horizontal|center_vertical"
-            android:hint="Ingrese sus apellidos"
-            android:digits="abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
-            android:layout_marginRight="16dp"
-            android:layout_marginLeft="16dp"
-            android:radius="12dp"
-            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/txtfecha"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button_run"
+        android:gravity="center"
+        android:text="Fecha de nacimiento"
+        android:textColor="#979292"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnfecha"
+        app:layout_constraintTop_toBottomOf="@id/txtPhone"
+        app:layout_constraintVertical_bias="0.095" />
 
-        <Spinner
-            android:id="@+id/spopciones"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_below="@+id/spopciones"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="160dp"
-            android:background="@drawable/button_run" />
+    <Button
+        android:id="@+id/btnfecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_dark_style"
+        android:text="Fecha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spopciones"
+        app:layout_constraintVertical_bias="0.098" />
 
-        <EditText
-            android:id="@+id/txtPhone"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginLeft="132dp"
-            android:layout_marginTop="160dp"
-            android:layout_marginRight="16dp"
-            android:background="@drawable/button_run"
-            android:digits="1234567890 +-()"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Ingrese un número de telefono"
-            android:inputType="phone"
-            android:maxLength="13" />
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button_run"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Ingrese un email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtfecha"
+        app:layout_constraintVertical_bias="0.11" />
 
-        <TextView
-            android:id="@+id/txtfecha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="75sp"
-            android:layout_marginTop="245sp"
-            android:text="Fecha de nacimiento" />
-
-        <Button
-            android:id="@+id/btnfecha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50sp"
-            android:layout_marginTop="275sp"
-            android:text="Fecha" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="272dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal">
-
-            <RadioGroup
-                android:id="@+id/rg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"/>
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/txtEmail"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="332dp"
-            android:layout_marginRight="16dp"
-            android:background="@drawable/button_run"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Ingrese un email"
-            android:inputType="textEmailAddress" />
-
-        <EditText
+    <EditText
             android:id="@+id/txtPassword"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="392dp"
             android:layout_marginRight="16dp"
             android:background="@drawable/button_run"
             android:ems="10"
             android:gravity="center"
             android:hint="Ingrese una contraseña"
-            android:inputType="textPassword" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="450dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btnRegistrar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Registrar"
-                android:textSize="10sp" />
-
-            <Space
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/btnBorrar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Extraer Datos"
-                android:textSize="10sp" />
-
-            <Space
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/btnCancelar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Cancelar"
-                android:textSize="10sp" />
-
-        </LinearLayout>
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtEmail"
+            app:layout_constraintVertical_bias="0.168" />
 
 
-    </FrameLayout>
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_dark_style"
+        android:text="Registrar"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCancelar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPassword"
+        app:layout_constraintVertical_bias="0.547" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_dark_style"
+        android:text="Cancelar"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnRegistrar"
+        app:layout_constraintTop_toBottomOf="@id/txtPassword"
+        app:layout_constraintVertical_bias="0.547" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
