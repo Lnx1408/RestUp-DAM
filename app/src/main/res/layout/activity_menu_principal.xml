@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuPrincipal"
+    android:background="@color/Gray">
+
+    <Button
+        android:id="@+id/btnGoMenu"
+        android:layout_width="255dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_menu_menu"
+        android:gravity="bottom|center"
+        android:text="@string/Menu"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/btnGoReservas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnGoReservas"
+        android:layout_width="255dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_menu_reservas"
+        android:gravity="bottom|center"
+        android:text="@string/Reserva"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/btnGoPromociones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGoMenu" />
+
+    <Button
+        android:id="@+id/btnGoPromociones"
+        android:layout_width="255dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_menu_promociones"
+        android:gravity="bottom|center"
+        android:text="@string/Promociones"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGoReservas" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
