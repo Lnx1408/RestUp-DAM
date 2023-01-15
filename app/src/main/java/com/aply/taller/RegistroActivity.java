@@ -47,7 +47,6 @@ public class RegistroActivity extends AppCompatActivity {
         EditText txtEmail = (EditText) findViewById(R.id.txtEmail);
         EditText txtPassword = (EditText) findViewById(R.id.txtPassword);
         Button btnRegistrar = (Button)findViewById(R.id.btnRegistrar);
-        Button btnExtraerDatos = (Button)findViewById(R.id.btnBorrar);
         Button btnCancelar = (Button)findViewById(R.id.btnCancelar);
 
         txtfecha = (TextView) findViewById(R.id.txtfecha);
@@ -58,46 +57,6 @@ public class RegistroActivity extends AppCompatActivity {
                 AbrirCalen(view);
             }
 
-        });
-
-        btnExtraerDatos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                extraerDatos();
-            }
-            public void extraerDatos(){
-                int statusSD = verificarStatusSD ();
-                String datosUsuario ="";
-
-                if(statusSD == 0 ) {
-
-                    try {
-                        File rutaArchivo = new File(getExternalFilesDir(null),"DatosUsuario.txt");
-                        InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(rutaArchivo));
-                        BufferedReader reader = new BufferedReader(inputStreamReader);
-                        //datosUsuario = reader.readLine();
-                        while((datosUsuario = reader.readLine())!=null){
-                            String[] datos = datosUsuario.split(";");
-                            txtNombres.setText(datos[0]);
-                            txtApellidos.setText(datos[1]);
-                            if(datos[3].equals("Celular")){
-
-                                opciones.setSelection(1);
-                            }else{
-                                opciones.setSelection(0);
-                            }
-                            txtPhone.setText(datos[4]);
-                            txtEmail.setText(datos[6]);
-                            txtPassword.setText(datos[7]);
-                        }
-                        Toast.makeText (getApplicationContext (), "Datos Extraidos con éxito", Toast.LENGTH_SHORT).show() ;
-                        reader.close();
-                        //extraerDatos();
-                    } catch (Exception e) {
-                        Log.e("Archivo","Error al acceder al archivo");
-                    }
-                }
-            }
         });
 
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
@@ -209,7 +168,7 @@ public class RegistroActivity extends AppCompatActivity {
         DatePickerDialog dp = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayofmonth) {
-                String fecha = dayofmonth +"/" + month + "/" + year;
+                String fecha = dayofmonth +"/" + month +1 + "/" + year;
                 txtfecha.setText(fecha);
             }
         }, anio, mes, dia);
