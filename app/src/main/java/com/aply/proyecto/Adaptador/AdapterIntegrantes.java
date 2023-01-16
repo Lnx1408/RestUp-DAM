@@ -1,4 +1,4 @@
-package com.aply.taller.Adaptador;
+package com.aply.proyecto.Adaptador;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,8 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.aply.taller.Entidades.Persona;
-import com.aply.taller.R;
+import com.aply.proyecto.Entidades.Persona;
+import com.aply.proyecto.R;
 
 import java.util.ArrayList;
 

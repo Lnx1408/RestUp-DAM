@@ -1,4 +1,4 @@
-package com.aply.taller;
+package com.aply.proyecto;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.aply.taller", appContext.getPackageName());
+        assertEquals("com.aply.proyecto", appContext.getPackageName());
     }
 }

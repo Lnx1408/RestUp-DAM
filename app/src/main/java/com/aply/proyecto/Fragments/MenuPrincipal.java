@@ -1,20 +1,14 @@
-package com.aply.taller.Fragments;
+package com.aply.proyecto.Fragments;
 //androidx.fragment.app.FragmentTransaction;
-import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
-import com.aply.taller.MainActivity;
-import com.aply.taller.R;
+import com.aply.proyecto.R;
 
 public class MenuPrincipal extends Fragment {
     @Override
