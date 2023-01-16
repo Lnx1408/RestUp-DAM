@@ -41,16 +41,14 @@ public class loginActivity extends AppCompatActivity {
         EditText user = (EditText)findViewById(R.id.username);
         EditText pass =(EditText)findViewById(R.id.password);
         Button ingresar = (Button)findViewById(R.id.login);
-        Button salir = (Button)findViewById(R.id.btnSalir);
+        Button btnRegistrar = (Button)findViewById(R.id.btnRegistrar);
 
 
 
         ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 validar();
-
             }
             /*private String resultado(Context context, String clave){
                 SharedPreferences sp = context.getSharedPreferences("Login", MODE_PRIVATE);
@@ -77,8 +75,8 @@ public class loginActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 GuardaSharedPre(u, c);
-                                Intent principal = new Intent(getBaseContext(), MainActivity.class);
-                                startActivity(principal);
+                                Intent MenuPrincipal = new Intent(getBaseContext(), MainActivity.class);
+                                startActivity(MenuPrincipal);
 
                             }
                         })
@@ -86,8 +84,8 @@ public class loginActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.cancel();
-                                 Intent principal = new Intent(getBaseContext(), MainActivity.class);
-                                  startActivity(principal);
+                                 Intent MenuPrincipal = new Intent(getBaseContext(), MainActivity.class);
+                                  startActivity(MenuPrincipal);
                             }
                         });
                 AlertDialog ad = alerta.create();
@@ -113,7 +111,7 @@ public class loginActivity extends AppCompatActivity {
                 }
             }
         });
-        salir.setOnClickListener(new View.OnClickListener() {
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent registro = new Intent(view.getContext(), RegistroActivity.class);

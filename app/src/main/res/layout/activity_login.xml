@@ -99,7 +99,7 @@
         app:layout_constraintVertical_bias="0.025" />
 
     <Button
-        android:id="@+id/btnSalir"
+        android:id="@+id/btnRegistrar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@drawable/btn_dark_style"
