@@ -3,11 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:title="Principal">
         <menu>
-            <item
-                android:id="@+id/home"
+            <item android:id="@+id/btnMenuPrincipal"
                 android:icon="@drawable/ic_home"
-                android:title="Home">
-            </item>
+                android:title="Menú principal"/>
             <item
                 android:id="@+id/acerca"
                 android:icon="@drawable/ic_group"

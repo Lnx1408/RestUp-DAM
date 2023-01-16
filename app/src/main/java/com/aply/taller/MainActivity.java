@@ -1,6 +1,11 @@
 package com.aply.taller;
 
-import static android.app.PendingIntent.getActivity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -11,20 +16,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.view.Gravity;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-
 import com.aply.taller.Fragments.Grupo_fragment;
 import com.aply.taller.Fragments.Main_fragment;
+import com.aply.taller.Fragments.MenuPrincipal;
 import com.google.android.material.navigation.NavigationView;
-
-import java.io.File;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
 
@@ -32,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ActionBarDrawerToggle actionBarDrawerToggle;
     Toolbar toolbar;
     NavigationView navigationView;
+
+
 
     // variables para cargar el fragment
     FragmentManager fragmentManager;
@@ -41,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
         toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -60,38 +60,46 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fragmentTransaction.commit();
 
     }
+
+
     public void Borrar(View v){
         try{
             SharedPreferences sharedPreferences = getSharedPreferences("Login", Context.MODE_PRIVATE);
 
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.clear();
-            editor.commit();
+            editor.apply();
         }catch (Exception ex){
             ex.printStackTrace();
         }
 
 
     }
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         drawerLayout.closeDrawer(GravityCompat.START);
-        if(item.getItemId() == R.id.home){
+        if(item.getItemId()== R.id.btnMenuPrincipal){
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.content , new Main_fragment());
+            fragmentTransaction.replace(R.id.content , new MenuPrincipal());
             fragmentTransaction.commit();
         }
+
         if(item.getItemId() == R.id.acerca){
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.content , new Grupo_fragment());
             fragmentTransaction.commit();
         }
+
         if(item.getItemId() == R.id.btnsalir){
             onBackPressed();
         }
         return false;
     }
+
+
+
 
 }
