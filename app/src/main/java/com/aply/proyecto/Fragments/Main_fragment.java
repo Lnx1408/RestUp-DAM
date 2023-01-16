@@ -1,4 +1,4 @@
-package com.aply.taller.Fragments;
+package com.aply.proyecto.Fragments;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.aply.taller.R;
+import com.aply.proyecto.R;
 
 public class Main_fragment extends Fragment {
 

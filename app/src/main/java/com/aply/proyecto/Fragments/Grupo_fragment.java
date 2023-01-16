@@ -1,4 +1,4 @@
-package com.aply.taller.Fragments;
+package com.aply.proyecto.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.aply.taller.Adaptador.AdapterIntegrantes;
-import com.aply.taller.Entidades.Persona;
-import com.aply.taller.R;
+import com.aply.proyecto.Adaptador.AdapterIntegrantes;
+import com.aply.proyecto.Entidades.Persona;
+import com.aply.proyecto.R;
 
 import java.util.ArrayList;
 

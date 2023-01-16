@@ -10,10 +10,27 @@
         android:layout_height="?attr/actionBarSize"
         android:background="#101010"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
-    <!--
-        android:layout_height="?att/actionBarZise"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
-           androidx.constraintlayout.widget.ConstraintLayout -->
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <RelativeLayout
+            android:layout_width = "28dp"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/rest_up_logo"/>
+
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:textStyle="bold"
+            android:text="REST-UP"/>
+
+    </androidx.appcompat.widget.Toolbar>
 
 </LinearLayout>

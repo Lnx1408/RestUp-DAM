@@ -1,11 +1,10 @@
-package com.aply.taller;
+package com.aply.proyecto;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -16,9 +15,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.aply.taller.Fragments.Grupo_fragment;
-import com.aply.taller.Fragments.Main_fragment;
-import com.aply.taller.Fragments.MenuPrincipal;
+import com.aply.proyecto.Fragments.Grupo_fragment;
+import com.aply.proyecto.Fragments.Main_fragment;
+import com.aply.proyecto.Fragments.MenuPrincipal;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {

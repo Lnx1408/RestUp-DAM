@@ -1,4 +1,4 @@
-package com.aply.taller;
+package com.aply.proyecto;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;

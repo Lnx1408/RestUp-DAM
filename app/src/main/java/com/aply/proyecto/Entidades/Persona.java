@@ -1,4 +1,4 @@
-package com.aply.taller.Entidades;
+package com.aply.proyecto.Entidades;
 
 public class Persona {
     private String nombre;

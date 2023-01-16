@@ -7,7 +7,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/rest_up_logo"
-        android:label="REST UP *Food and Drinks*"
+        android:label=""
         android:roundIcon="@mipmap/rest_up_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"

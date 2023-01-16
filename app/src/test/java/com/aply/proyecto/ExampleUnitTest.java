@@ -1,4 +1,4 @@
-package com.aply.taller;
+package com.aply.proyecto;
 
 import org.junit.Test;
 
