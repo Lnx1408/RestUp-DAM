@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import com.aply.taller.R;
 
 public class Main_fragment extends Fragment {
+
     @Nullable
     @Override
 
