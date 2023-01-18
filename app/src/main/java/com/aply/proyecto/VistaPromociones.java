@@ -69,7 +69,7 @@ public class VistaPromociones extends AppCompatActivity {
                 promociones.imagen = fila.getString(imagen);
                 ArrayPromo.add(promociones);
 
-                datos.add( fila.getString(id) + " \t "  + fila.getString(descripcion) + " \t "  + fila.getString(imagen) + " \t "  + fila.getString(tiempo) );
+                datos.add( fila.getString(id) + " \t "  + fila.getString(descripcion) + " \t "  + fila.getString(tiempo) + " \t "  + fila.getString(imagen) );
             }while(fila.moveToNext());
             arrayAdapter.notifyDataSetChanged();
             lstPromo.invalidateViews();

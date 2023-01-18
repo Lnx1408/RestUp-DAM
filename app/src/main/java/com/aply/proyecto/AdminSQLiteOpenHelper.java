@@ -18,6 +18,8 @@ public class AdminSQLiteOpenHelper  extends SQLiteOpenHelper {
 
         sql.execSQL("create table reservacion(codigo int primary key, fecha text, hora text, cantidadp int)");
 
+        sql.execSQL("create table usuario(codigo int primary key autoincrement, nombre text, apellido text, telefono text, fnacimiento text, correo text, password text)");
+
     }
 
     @Override

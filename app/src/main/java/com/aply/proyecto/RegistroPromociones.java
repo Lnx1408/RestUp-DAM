@@ -31,10 +31,11 @@ public class RegistroPromociones extends AppCompatActivity {
         botonModificar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent v = new Intent(getApplicationContext(), VistaMenu.class);
-                startActivity(v);
+                Intent vp = new Intent(getApplicationContext(), VistaPromociones.class);
+                startActivity(vp);
             }
         });
+
     }
 
     public void RegistrarPromocion(View view){

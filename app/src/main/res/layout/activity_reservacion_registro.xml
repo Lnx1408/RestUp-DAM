@@ -202,15 +202,15 @@
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@drawable/btn_dark_text"
-            android:background="@drawable/btn_dark_style"
-            android:layout_weight="1"
             android:id="@+id/btncancel2"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_dark_style"
             android:text="Cancelar"
-            />
+            android:textColor="@drawable/btn_dark_text" />
 
     </LinearLayout>
 

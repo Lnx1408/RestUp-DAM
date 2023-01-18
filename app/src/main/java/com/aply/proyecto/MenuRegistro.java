@@ -48,6 +48,23 @@ public class MenuRegistro extends AppCompatActivity {
         db.close();
 
         Toast.makeText(this, "Se realizo el registro con exito", Toast.LENGTH_SHORT).show();
-
+        limpiarCampo();
+        alertaM();
+    }
+    public void limpiarCampo(){
+        id.setText("");
+        nam.setText("");
+        precio.setText("");
+    }
+    public void alertaM(){
+        if(id.getText().toString().isEmpty()) {
+            id.setError("Asigne un codigo");
+        }
+        if(nam.getText().toString().isEmpty()) {
+            nam.setError("Asigne un producto");
+        }
+        if(precio.getText().toString().isEmpty()) {
+            precio.setError("Asigne un precio");
+        }
     }
 }

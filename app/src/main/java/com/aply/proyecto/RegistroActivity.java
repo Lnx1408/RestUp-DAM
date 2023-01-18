@@ -1,6 +1,8 @@
 package com.aply.proyecto;
 
 import android.app.DatePickerDialog;
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -24,7 +26,8 @@ public class RegistroActivity extends AppCompatActivity {
 
     Spinner opciones;
     TextView txtfecha;
-
+    EditText txtNombres, txtApellidos, txtPhone, txtEmail, txtPassword;
+    Button btnRegistrar, btnCancelar, btnfecha;
 
 
     @Override
@@ -37,16 +40,17 @@ public class RegistroActivity extends AppCompatActivity {
         opciones.setAdapter(adapter);
 
 
-        EditText txtNombres = (EditText) findViewById(R.id.txtNombres);
-        EditText txtApellidos = (EditText) findViewById(R.id.txtApellidos);
-        EditText txtPhone = (EditText) findViewById(R.id.txtPhone);
-        EditText txtEmail = (EditText) findViewById(R.id.txtEmail);
-        EditText txtPassword = (EditText) findViewById(R.id.txtPassword);
-        Button btnRegistrar = (Button)findViewById(R.id.btnRegistrar);
-        Button btnCancelar = (Button)findViewById(R.id.btnCancelar);
+         txtNombres = (EditText) findViewById(R.id.txtNombres);
+         txtApellidos = (EditText) findViewById(R.id.txtApellidos);
+         txtPhone = (EditText) findViewById(R.id.txtPhone);
+         txtfecha = (TextView) findViewById(R.id.tfecha);
+         txtEmail = (EditText) findViewById(R.id.txtEmail);
+         txtPassword = (EditText) findViewById(R.id.txtPassword);
+         btnRegistrar = (Button)findViewById(R.id.btnRegistrar);
+         btnCancelar = (Button)findViewById(R.id.btnCancelar);
 
-        txtfecha = (TextView) findViewById(R.id.tfecha);
-        Button btnfecha = (Button)findViewById(R.id.btnfecha);
+
+         btnfecha = (Button)findViewById(R.id.btnfecha);
         btnfecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,7 +63,8 @@ public class RegistroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 MostrarAlertas();
-                RegistrarDatos(view);
+                RegistroU(view);
+             //   RegistrarDatos(view);
                 limpiarDatos();
 
 
@@ -136,6 +141,32 @@ public class RegistroActivity extends AppCompatActivity {
 
 
     }
+
+    public void RegistroU(View view){
+
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "admin", null, 1);
+        SQLiteDatabase db = admin.getWritableDatabase();
+        String name = txtNombres.getText().toString();
+        String ape = txtApellidos.getText().toString();
+        String telf = txtPhone.getText().toString();
+        String fnaci = txtfecha.getText().toString();
+        String correo = txtEmail.getText().toString();
+        String pass = txtPassword.getText().toString();
+        ContentValues registro = new ContentValues();
+        registro.put("nombre", name);
+        registro.put("apellido", ape);
+        registro.put( "telefono", telf);
+        registro.put("fnacimiento", fnaci);
+        registro.put("correo", correo);
+        registro.put("password", pass);
+        db.insert("usuario", null, registro);
+        db.close();
+
+        Toast.makeText(this, "Se realizo el registro con exito", Toast.LENGTH_SHORT).show();
+
+    }
+
+
     public int verificarStatusSD(){
 
         String estado = Environment.getExternalStorageState();
