@@ -132,35 +132,26 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtfecha"
+        app:layout_constraintTop_toBottomOf="@+id/tfecha"
         app:layout_constraintVertical_bias="0.08" />
-        
-        
-
-
-
-        app:layout_constraintTop_toBottomOf="@id/tfecha"
-        app:layout_constraintVertical_bias="0.11" />
-
-
 
 
     <EditText
-            android:id="@+id/txtPassword"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@drawable/button_run"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Ingrese una contraseña"
-            android:inputType="textPassword"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtEmail"
-            app:layout_constraintVertical_bias="0.09" />
+        android:id="@+id/txtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button_run"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Ingrese una contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtEmail"
+        app:layout_constraintVertical_bias="0.09" />
 
 
     <Button
@@ -193,7 +184,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btnRegistrar"
         app:layout_constraintTop_toBottomOf="@id/txtPassword"
-        app:layout_constraintVertical_bias="0.547" />
-
+        app:layout_constraintVertical_bias="0.57" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -95,7 +95,7 @@ public class VistaMenu extends AppCompatActivity {
         startActivity(re);
     }
 
-    public void consultarPromo(View v){
+    public void consultarDescripcion(View v){
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "admin", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
         String des =  plat.getText().toString();

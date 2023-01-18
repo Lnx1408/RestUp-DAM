@@ -22,7 +22,7 @@ public class MenuRegistro extends AppCompatActivity {
         id=(EditText)findViewById(R.id.id);
         nam=(EditText)findViewById(R.id.name);
         precio=(EditText)findViewById(R.id.precio);
-        bm = (Button) findViewById(R.id.bt2);
+        bm = (Button) findViewById(R.id.btn2);
 
         bm.setOnClickListener(new View.OnClickListener() {
             @Override
