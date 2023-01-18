@@ -2,17 +2,18 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmenMenuPrincipal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.MenuPrincipal"
-    android:id="@+id/fragmenMenuPrincipal">
+    android:onClick="reservar"
+    tools:context=".Fragments.MenuPrincipal">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="?android:attr/actionBarSize"
-        tools:context=".Fragments.MenuPrincipal"
-        android:background="@color/Gray">
+        android:background="@color/Gray"
+        tools:context=".Fragments.MenuPrincipal">
 
 
         <Button
@@ -42,6 +43,7 @@
             android:layout_margin="20dp"
             android:background="@drawable/btn_menu_reservas"
             android:gravity="bottom|center"
+            android:onClick="reservar"
             android:text="@string/Reserva"
             android:textColor="@color/white"
             android:textSize="24sp"

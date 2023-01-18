@@ -45,7 +45,7 @@ public class RegistroActivity extends AppCompatActivity {
         Button btnRegistrar = (Button)findViewById(R.id.btnRegistrar);
         Button btnCancelar = (Button)findViewById(R.id.btnCancelar);
 
-        txtfecha = (TextView) findViewById(R.id.txtfecha);
+        txtfecha = (TextView) findViewById(R.id.tfecha);
         Button btnfecha = (Button)findViewById(R.id.btnfecha);
         btnfecha.setOnClickListener(new View.OnClickListener() {
             @Override
