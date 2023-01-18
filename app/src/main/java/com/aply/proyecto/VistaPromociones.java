@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public class VistaPromociones extends AppCompatActivity {
 
-    Button btnSalir, btnBuscar;
+    Button btnRetiro, btnBuscar;
     EditText txtBusqueda;
     ListView lstPromo;
 
@@ -37,7 +37,7 @@ public class VistaPromociones extends AppCompatActivity {
 
         btnBuscar = (Button)findViewById(R.id.btnBuscar);
         txtBusqueda = (EditText)findViewById(R.id.txtBusqueda);
-        btnBuscar = (Button)findViewById(R.id.btnSalir);
+        btnRetiro = (Button)findViewById(R.id.btnSalir);
         lstPromo = findViewById(R.id.lstPromo);
 
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "admin", null, 1);
@@ -65,11 +65,11 @@ public class VistaPromociones extends AppCompatActivity {
                 clsPromociones promociones = new clsPromociones();
                 promociones.idPromocion = fila.getString(id);
                 promociones.decripcion = fila.getString(descripcion);
-                promociones.imagen = fila.getString(imagen);
                 promociones.tiempo = fila.getString(tiempo);
+                promociones.imagen = fila.getString(imagen);
                 ArrayPromo.add(promociones);
 
-                datos.add( fila.getString(id) + " \t "  + fila.getString(descripcion) + " \t "  + fila.getString(tiempo) + " \t "  + fila.getString(imagen) );
+                datos.add( fila.getString(id) + " \t "  + fila.getString(descripcion) + " \t "  + fila.getString(imagen) + " \t "  + fila.getString(tiempo) );
             }while(fila.moveToNext());
             arrayAdapter.notifyDataSetChanged();
             lstPromo.invalidateViews();
@@ -79,7 +79,7 @@ public class VistaPromociones extends AppCompatActivity {
             db.close();
         }
 
-        btnSalir.setOnClickListener(new View.OnClickListener() {
+        btnRetiro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent p = new Intent(getApplicationContext(), MainActivity.class);

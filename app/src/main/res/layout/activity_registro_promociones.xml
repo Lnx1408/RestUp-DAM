@@ -153,7 +153,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/btn_dark_style"
-        android:onClick="RegistroM"
+        android:onClick="RegistrarPromocion"
         android:text="Agregar"
         android:textColor="@drawable/btn_dark_text"
         app:layout_constraintBottom_toBottomOf="parent"

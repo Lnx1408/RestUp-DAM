@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         if(item.getItemId() == R.id.bnsalir){
-            finish();
+            finishAffinity();
             System.exit(0);
         }
         return false;
