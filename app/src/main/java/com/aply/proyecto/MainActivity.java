@@ -66,9 +66,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         startActivity(ob);
     }
 
+
+    public void nuevaPromo(View view){
+        Intent ob = new Intent(getApplicationContext(), VistaPromociones.class);
+        startActivity(ob);
+
     public void reservar(View view){
         Intent rr = new Intent(getApplicationContext(), ReservacionVista.class);
         startActivity(rr);
+
     }
 
     public void Borrar(View v){

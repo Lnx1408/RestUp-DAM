@@ -19,7 +19,6 @@ import com.aply.proyecto.Entidades.MenuRest;
 import java.util.ArrayList;
 
 public class VistaMenu extends AppCompatActivity {
-
     Button b2, bp;
     EditText plat;
     ListView lis;
@@ -91,12 +90,12 @@ public class VistaMenu extends AppCompatActivity {
         });
 
     }
-    public void abrirN(View v){
+    public void abrirNuevo(View v){
         Intent re = new Intent(getApplicationContext(), MenuRegistro.class);
         startActivity(re);
     }
 
-    public void consultarDescripcion(View v){
+    public void consultarPromo(View v){
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "admin", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
         String des =  plat.getText().toString();
