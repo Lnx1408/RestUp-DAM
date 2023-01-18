@@ -90,7 +90,7 @@
 
 
     <TextView
-        android:id="@+id/txtfecha"
+        android:id="@+id/tfecha"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginLeft="16dp"
@@ -133,7 +133,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtfecha"
+        app:layout_constraintTop_toBottomOf="@id/tfecha"
         app:layout_constraintVertical_bias="0.11" />
 
     <EditText

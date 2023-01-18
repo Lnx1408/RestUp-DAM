@@ -66,6 +66,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         startActivity(ob);
     }
 
+    public void reservar(View view){
+        Intent rr = new Intent(getApplicationContext(), ReservacionVista.class);
+        startActivity(rr);
+    }
+
     public void Borrar(View v){
         try{
             SharedPreferences sharedPreferences = getSharedPreferences("Login", Context.MODE_PRIVATE);

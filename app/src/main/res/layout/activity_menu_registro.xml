@@ -178,7 +178,7 @@
             android:textColor="@drawable/btn_dark_text"
             android:background="@drawable/btn_dark_style"
             android:layout_weight="1"
-            android:id="@+id/btn2"
+            android:id="@+id/bt2"
             android:text="Cancelar"
             />
 

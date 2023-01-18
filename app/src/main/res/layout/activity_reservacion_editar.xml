@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="@color/Gray"
-    tools:context=".Editar_menu">
+    tools:context=".ReservacionEditar">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -65,24 +65,23 @@
 
         <EditText
 
+            android:id="@+id/tid"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:layout_weight="1"
             android:background="@drawable/button_run"
+            android:ems="10"
             android:gravity="center_horizontal|center_vertical"
             android:hint="Ingrese un id"
+            android:radius="12dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.168"
-            android:radius="12dp"
-            android:textSize="18sp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:id="@+id/id"
-            android:textAlignment="center"
-            />
+            app:layout_constraintVertical_bias="0.168" />
     </LinearLayout>
 
 
@@ -112,7 +111,7 @@
             android:textSize="18sp"
             android:layout_weight="1"
             android:ems="10"
-            android:id="@+id/name"
+            android:id="@+id/tfecha"
             android:textAlignment="center"
             />
     </LinearLayout>
@@ -142,7 +141,35 @@
             android:textSize="18sp"
             android:layout_weight="1"
             android:ems="10"
-            android:id="@+id/precio"
+            android:id="@+id/thora"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:gravity="center">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/button_run"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="Ingrese precio"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.168"
+            android:radius="12dp"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:id="@+id/tcantidad"
             android:textAlignment="center"
             />
     </LinearLayout>
@@ -158,32 +185,32 @@
 
 
         <Button
-            android:id="@+id/actualizar"
+            android:id="@+id/bactualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@drawable/btn_dark_text"
             android:background="@drawable/btn_dark_style"
             android:layout_weight="1"
-            android:onClick="modificar"
-            android:text="Update" />
+            android:onClick="modificarR"
+            android:text="Actualizar" />
 
         <Button
-            android:id="@+id/bt2"
+            android:id="@+id/beliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@drawable/btn_dark_text"
             android:background="@drawable/btn_dark_style"
             android:layout_weight="1"
-            android:onClick="eliminar"
-            android:text="Delete" />
+            android:onClick="eliminarR"
+            android:text="Eliminar" />
 
         <Button
-            android:id="@+id/bt3"
+            android:id="@+id/bregresar"
             android:layout_width="wrap_content"
             android:layout_height="34dp"
             android:layout_weight="1"
             android:background="@drawable/btn_dark_style"
-            android:onClick="regresar"
+            android:onClick="regresar1"
             android:text="Regresar"
             android:textColor="@drawable/btn_dark_text" />
 

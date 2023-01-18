@@ -13,6 +13,7 @@ public class AdminSQLiteOpenHelper  extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sql) {
         sql.execSQL("create table menu_restaurant(codigo int primary key, descripcion text, precio real)");
+        sql.execSQL("create table reservacion(codigo int primary key, fecha text, hora text, cantidadp int)");
     }
 
     @Override
