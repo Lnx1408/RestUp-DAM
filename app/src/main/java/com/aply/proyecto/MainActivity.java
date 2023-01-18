@@ -66,6 +66,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         startActivity(ob);
     }
 
+    public void nuevaPromo(View view){
+        Intent ob = new Intent(getApplicationContext(), VistaPromociones.class);
+        startActivity(ob);
+    }
+
     public void Borrar(View v){
         try{
             SharedPreferences sharedPreferences = getSharedPreferences("Login", Context.MODE_PRIVATE);

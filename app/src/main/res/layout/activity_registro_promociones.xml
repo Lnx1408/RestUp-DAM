@@ -2,15 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Gray"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context=".MenuRegistro"
+    tools:context=".RegistroPromociones">
 
-    >
 
 
     <androidx.appcompat.widget.Toolbar
@@ -58,7 +54,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Nuevo Registro"
+        android:text="Nueva Promoción"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,7 +67,7 @@
 
     <EditText
 
-        android:id="@+id/id"
+        android:id="@+id/txtIdPromo"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="25dp"
@@ -79,7 +75,7 @@
         android:background="@drawable/button_run"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
-        android:hint="Ingrese un id"
+        android:hint="Id de la promocion"
         android:radius="12dp"
         android:textAlignment="center"
         android:textSize="18sp"
@@ -91,7 +87,7 @@
         app:layout_constraintVertical_bias="0.1" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/txtDescripcionPromo"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="25dp"
@@ -99,7 +95,7 @@
         android:background="@drawable/button_run"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
-        android:hint="Ingrese un producto"
+        android:hint="Descripcion de la promocion"
         android:radius="12dp"
         android:textAlignment="center"
         android:textSize="18sp"
@@ -107,11 +103,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id"
+        app:layout_constraintTop_toBottomOf="@+id/txtIdPromo"
         app:layout_constraintVertical_bias="0.05" />
 
     <EditText
-        android:id="@+id/precio"
+        android:id="@+id/txtTiempo"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="25dp"
@@ -119,7 +115,7 @@
         android:background="@drawable/button_run"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
-        android:hint="Ingrese precio"
+        android:hint="Tiempo de promocion"
         android:radius="12dp"
         android:textAlignment="center"
         android:textSize="18sp"
@@ -127,12 +123,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/txtDescripcionPromo"
+        app:layout_constraintVertical_bias="0.05" />
+    <EditText
+        android:id="@+id/txtImagen"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/button_run"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Imagen"
+        android:radius="12dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTiempo"
         app:layout_constraintVertical_bias="0.05" />
 
 
     <Button
-        android:id="@+id/bt1"
+        android:id="@+id/btnGuardarPromo"
         android:layout_width="150dp"
         android:layout_height="48dp"
         android:layout_marginStart="25dp"
@@ -142,14 +157,14 @@
         android:text="Agregar"
         android:textColor="@drawable/btn_dark_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btn2"
+        app:layout_constraintEnd_toStartOf="@id/btnCancelarPromo"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/precio"
+        app:layout_constraintTop_toBottomOf="@id/txtImagen"
         app:layout_constraintVertical_bias="0.2" />
 
     <Button
-        android:id="@+id/btn2"
+        android:id="@+id/btnCancelarPromo"
         android:layout_width="150dp"
         android:layout_height="48dp"
         android:layout_marginEnd="25dp"
@@ -159,9 +174,7 @@
         android:textColor="@drawable/btn_dark_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/bt1"
-        app:layout_constraintTop_toBottomOf="@id/precio"
+        app:layout_constraintStart_toEndOf="@id/btnGuardarPromo"
+        app:layout_constraintTop_toBottomOf="@id/txtImagen"
         app:layout_constraintVertical_bias="0.2" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

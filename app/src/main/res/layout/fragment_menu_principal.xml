@@ -59,6 +59,7 @@
             android:layout_marginBottom="80dp"
             android:background="@drawable/btn_menu_promociones"
             android:gravity="bottom|center"
+            android:onClick="nuevaPromo"
             android:text="@string/Promociones"
             android:textColor="@color/white"
             android:textSize="24sp"
