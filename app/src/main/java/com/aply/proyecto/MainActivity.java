@@ -1,6 +1,7 @@
 package com.aply.proyecto;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -55,11 +56,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //cargar fragment
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.content , new Main_fragment());
+        fragmentTransaction.add(R.id.content , new MenuPrincipal());
         fragmentTransaction.commit();
 
     }
 
+    public void nuevo(View view){
+        Intent ob = new Intent(getApplicationContext(), VistaMenu.class);
+        startActivity(ob);
+    }
 
     public void Borrar(View v){
         try{
@@ -91,9 +96,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction.replace(R.id.content , new Grupo_fragment());
             fragmentTransaction.commit();
         }
+        if(item.getItemId() == R.id.registrarCliente){
+            Intent rc = new Intent(getApplicationContext(), RegistroActivity.class);
+            startActivity(rc);
+        }
 
-        if(item.getItemId() == R.id.btnsalir){
-            onBackPressed();
+
+        if(item.getItemId() == R.id.bnsalir){
+            finish();
+            System.exit(0);
         }
         return false;
     }

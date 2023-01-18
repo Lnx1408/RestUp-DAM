@@ -13,7 +13,27 @@
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:targetApi="31">
         <activity
-
+            android:name=".Editar_menu"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".VistaMenu"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MenuRegistro"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ModiPassword"
             android:exported="false">
             <meta-data
