@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Gray"
     android:onClick="regresarPro"
     tools:context=".EditarPromociones">
 
@@ -156,7 +157,7 @@
         android:text="Update"
         android:textColor="@drawable/btn_dark_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/bt2"
+        app:layout_constraintEnd_toStartOf="@id/btEpro"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtImagen"
@@ -173,10 +174,10 @@
         android:text="Delete"
         android:textColor="@drawable/btn_dark_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/bt3"
+        app:layout_constraintEnd_toStartOf="@id/btPro"
         app:layout_constraintStart_toEndOf="@id/btcPro"
         app:layout_constraintTop_toBottomOf="@id/txtImagen"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.2" />
 
 
     <Button
@@ -193,7 +194,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btEpro"
         app:layout_constraintTop_toBottomOf="@id/txtImagen"
-        app:layout_constraintVertical_bias="0.191" />
+        app:layout_constraintVertical_bias="0.2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

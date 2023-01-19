@@ -1,218 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
     android:background="@color/Gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".ReservacionRegistro">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
-        android:background="#101010"
+        android:background="@color/Gray"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
 
-        <RelativeLayout
-            android:layout_width = "28dp"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            >
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/rest_up_logo"/>
+            android:src="@mipmap/rest_up_logo" />
 
 
-        </RelativeLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="18dp"
-            android:textStyle="bold"
-            android:text="REST-UP"/>
+            android:text="REST-UP"
+            android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="3dp"
-        android:gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nuevo Registro"
-            android:textSize="34sp"
-            android:layout_margin="5dp"
-            android:textColor="#F2EAEA"
 
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:gravity="center">
-
-        <!--TextView
+    <!--TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Id"
             /-->
 
-        <EditText
-
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@drawable/button_run"
-            android:gravity="center_horizontal|center_vertical"
-            android:hint="Ingrese un id"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.168"
-            android:radius="12dp"
-            android:textSize="18sp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:id="@+id/tid"
-            android:textAlignment="center"
-            />
-    </LinearLayout>
-
-
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:gravity="center"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:gravity="center">
+        android:text="Nuevo Registro"
+        android:textColor="#F2EAEA"
+
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <EditText
+
+        android:id="@+id/tid"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_run"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Ingrese un id"
+        android:radius="12dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.1" />
 
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@drawable/button_run"
-            android:gravity="center_horizontal|center_vertical"
-            android:hint="Ingrese fecha"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.168"
-            android:radius="12dp"
-            android:textSize="18sp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:id="@+id/tfecha"
-            android:textAlignment="center"
-            />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/tfecha"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_run"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Ingrese fecha"
+        android:radius="12dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tid"
+        app:layout_constraintVertical_bias="0.1" />
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:gravity="center">
+    <EditText
+        android:id="@+id/thora"
+        android:background="@drawable/button_run"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Ingrese hora"
+        android:radius="12dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tfecha"
+        app:layout_constraintVertical_bias="0.1" />
 
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@drawable/button_run"
-            android:gravity="center_horizontal|center_vertical"
-            android:hint="Ingrese hora"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.168"
-            android:radius="12dp"
-            android:textSize="18sp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:id="@+id/thora"
-            android:textAlignment="center"
-            />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/tcantidad"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_run"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Cantidad de personas"
+        android:radius="12dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thora"
+        app:layout_constraintVertical_bias="0.1" />
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:gravity="center">
+    <Button
+        android:id="@+id/btagregar1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/btn_dark_style"
+        android:onClick="RegistroR"
+        android:text="Agregar"
+        android:textColor="@drawable/btn_dark_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btncancel2"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tcantidad"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btncancel2"
+        android:layout_width="195dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/btn_dark_style"
+        android:text="Cancelar"
+        android:textColor="@drawable/btn_dark_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btagregar1"
+        app:layout_constraintTop_toBottomOf="@+id/tcantidad"
+        app:layout_constraintVertical_bias="0.5"/>
 
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@drawable/button_run"
-            android:gravity="center_horizontal|center_vertical"
-            android:hint="Cantidad de personas"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.168"
-            android:radius="12dp"
-            android:textSize="18sp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:id="@+id/tcantidad"
-            android:textAlignment="center"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="8dp"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/btagregar1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@drawable/btn_dark_text"
-            android:background="@drawable/btn_dark_style"
-            android:layout_weight="1"
-            android:onClick="RegistroR"
-            android:text="Agregar" />
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <Button
-            android:id="@+id/btncancel2"
-            android:layout_width="wrap_content"
-            android:layout_height="33dp"
-            android:layout_weight="1"
-            android:background="@drawable/btn_dark_style"
-            android:text="Cancelar"
-            android:textColor="@drawable/btn_dark_text" />
-
-    </LinearLayout>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
