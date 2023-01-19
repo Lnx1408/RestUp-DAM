@@ -89,6 +89,8 @@ public class Editar_menu extends AppCompatActivity {
         @Override
       public void onClick(DialogInterface dialogInterface, int i) {
             eliminar();
+            Intent ob = new Intent(getApplicationContext(), VistaMenu.class);
+            startActivity(ob);
           }
         });
         adb.setNegativeButton("No", new DialogInterface.OnClickListener() {
