@@ -12,14 +12,13 @@ public class AdminSQLiteOpenHelper  extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sql) {
-        sql.execSQL("create table menu_restaurant(codigo int primary key, descripcion text, precio real)");
+        sql.execSQL("create table if not exists menu_restaurant(codigo integer primary key, descripcion text, precio real)");
 
-        sql.execSQL("create table promociones_tabla(idPromocion int primary key, descripcion text, tiempo text, imagen text)");
+        sql.execSQL("create table if not exists promociones_tabla(idPromocion integer primary key, descripcion text, tiempo text, imagen text)");
 
-        sql.execSQL("create table reservacion(codigo int primary key, fecha text, hora text, cantidadp int)");
+        sql.execSQL("create table if not exists reservacion(codigo integer primary key, fecha text, hora text, cantidadp integer)");
 
-        sql.execSQL("create table usuario(codigo int primary key autoincrement, nombre text, apellido text, telefono text, fnacimiento text, correo text, password text)");
-
+        sql.execSQL("create table if not exists usuario(codigo integer primary key autoincrement, nombre text, apellido text, telefono text, fnacimiento text, correo text, password text)");
     }
 
     @Override

@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -123,6 +125,17 @@ public class loginActivity extends AppCompatActivity {
         });
     }
     public boolean login(String validuser, String password){
-        return validuser.equals(this.validuser) && password.equals(this.password);
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "admin", null, 1);
+        SQLiteDatabase db = admin.getWritableDatabase();
+        boolean acceso = false;
+
+        Cursor fila = db.rawQuery("SELECT correo, password from usuario where correo = '"+validuser+"' and password = '"+password+"'" , null);
+        if(fila.moveToFirst()){
+            acceso = true;
+        }else{
+            Toast.makeText( this, "No se encontraron datos del usuario", Toast.LENGTH_SHORT ).show();
+        }
+
+        return acceso;
     }
 }
