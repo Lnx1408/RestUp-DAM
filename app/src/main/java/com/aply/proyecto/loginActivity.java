@@ -10,15 +10,22 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+
 public class loginActivity extends AppCompatActivity {
 
-    final String password="123456";
-    final String validuser="Grupo9";
+
+    EditText user;
+    EditText pass;
 
     private boolean iniciarSesion() {
         try {
@@ -40,8 +47,8 @@ public class loginActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_login);
 
-        EditText user = (EditText)findViewById(R.id.username);
-        EditText pass =(EditText)findViewById(R.id.password);
+        user = (EditText)findViewById(R.id.username);
+        pass =(EditText)findViewById(R.id.password);
         Button ingresar = (Button)findViewById(R.id.login);
         Button btnRegistrar = (Button)findViewById(R.id.btnRegistrar);
 
@@ -132,10 +139,54 @@ public class loginActivity extends AppCompatActivity {
         Cursor fila = db.rawQuery("SELECT correo, password from usuario where correo = '"+validuser+"' and password = '"+password+"'" , null);
         if(fila.moveToFirst()){
             acceso = true;
+            registrarDatosTxt();
         }else{
             Toast.makeText( this, "No se encontraron datos del usuario", Toast.LENGTH_SHORT ).show();
         }
-
         return acceso;
+    }
+
+
+
+    //Registrar un txt con el nombre del usuario que accede a la aplicación
+    public int verificarStatusSD(){
+
+        String estado = Environment.getExternalStorageState();
+        if(estado.equals(Environment.MEDIA_MOUNTED)){
+
+            //Toast.makeText(getApplicationContext(),"SD Localizada.",Toast.LENGTH_SHORT).show();
+            return 0;
+        }
+        else if (estado.equals(Environment.MEDIA_MOUNTED_READ_ONLY)){
+            //Toast.makeText(getApplicationContext(),"SD - Solo lectura.",Toast.LENGTH_SHORT).show();
+            return 1;
+        }
+        else {
+            Toast.makeText(getApplicationContext(),"SD no localizada.",Toast.LENGTH_SHORT).show();
+            return 2;
+        }
+    }
+
+
+
+    public void registrarDatosTxt(){
+        int statusSD = verificarStatusSD ();
+        String DatosUsuario;
+
+        if(statusSD == 0 ){
+            try{
+                File f =new File(getExternalFilesDir(null), "DatosUsuario.txt");
+                OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(f,false));
+                DatosUsuario = user.getText().toString ()+";"+
+                        pass.getText().toString();
+                writer.write(DatosUsuario);
+                writer.close();
+            }catch (Exception ex ){
+                Log.e("Archivo","Error al guardar el archivo");
+            }
+        }
+        else{
+            Log.e("Archivo","Error al guardar el archivo");
+        }
     }
 }

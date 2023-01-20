@@ -108,16 +108,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction.commit();
         }
         if(item.getItemId() == R.id.registrarCliente){
-            Intent rc = new Intent(getApplicationContext(), RegistroActivity.class);
+            Intent rc = new Intent(getApplicationContext(), ModiPassword.class);
             startActivity(rc);
         }
 
 
         if(item.getItemId() == R.id.bnsalir){
+            borrarSharedPreference();
             finishAffinity();
             System.exit(0);
         }
         return false;
+    }
+
+
+    public void borrarSharedPreference(){
+        try{
+            SharedPreferences sharedPreferences = getSharedPreferences("Login", Context.MODE_PRIVATE);
+
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear();
+            editor.commit();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
     }
 
 
